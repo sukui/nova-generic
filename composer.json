@@ -6,7 +6,6 @@
     "nova-service/generic": "dev-master",
     "zanphp/nova-foundation": "dev-master",
     "zanphp/nova": "dev-master",
-
     "zanphp/exception": "dev-master",
     "zanphp/contracts": "dev-master",
     "zanphp/container": "dev-master"
