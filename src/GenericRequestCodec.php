@@ -91,6 +91,10 @@ final class GenericRequestCodec
             throw new GenericInvokeException("Invalid generic request service or method");
         }
 
+        if ($serviceName === "com.youzan.service.test" && $methodName === "stats") {
+            return;
+        }
+
         $serviceName = str_replace('.', '\\', ucwords($serviceName, '.'));
         $request->serviceName = $serviceName;
 
