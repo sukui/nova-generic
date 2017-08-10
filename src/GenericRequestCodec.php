@@ -9,6 +9,7 @@ use Kdt\Iron\Nova\Service\ClassMap;
 use Thrift\Type\TType;
 use Com\Youzan\Nova\Framework\Generic\Service\GenericRequest;
 use ZanPHP\Contracts\Foundation\Application;
+use ZanPHP\ThriftSerialization\ThriftSerializable;
 
 
 final class GenericRequestCodec
@@ -68,7 +69,13 @@ final class GenericRequestCodec
      */
     public static function decode($novaServiceName, $methodName, $args)
     {
-        $args = Nova::decodeServiceArgs($novaServiceName, $methodName, $args);
+        $thrift = new ThriftSerializable();
+        $thrift->service = $novaServiceName;
+        $thrift->method = $methodName;
+        $thrift->struct = $args;
+        $thrift->side = ThriftSerializable::SERVER;
+        $args = $thrift->unserialize();
+
         if ($args[0] && is_object($args[0]) && ($args[0] instanceof GenericRequest)) {
             static::checkAndParse($args[0]);
             return $args[0];
