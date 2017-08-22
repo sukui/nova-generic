@@ -4,8 +4,8 @@
     "php": ">=5.6",
     "packaged/thrift": "0.9.2.1",
     "nova-service/generic": "dev-master",
-    "zanphp/nova-foundation": "dev-master",
-    "zanphp/thrift-serialization": "dev-master",
+    "zanphp/nova-foundation": "dev-laogui",
+    "zanphp/thrift-serialization": "dev-laogui",
     "zanphp/exception": "dev-master",
     "zanphp/contracts": "dev-master",
     "zanphp/container": "dev-master"
