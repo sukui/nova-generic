@@ -8,7 +8,7 @@
     "zanphp/thrift-serialization": "dev-laogui",
     "zanphp/exception": "dev-master",
     "zanphp/contracts": "dev-master",
-    "zanphp/container": "dev-master"
+    "zanphp/container": "dev-laogui"
   },
   "autoload": {
     "psr-4": {
